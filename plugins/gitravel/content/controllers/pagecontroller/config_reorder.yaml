@@ -1,0 +1,4 @@
+title: PageController
+modelClass: GiTravel\Content\Models\PageModel
+toolbar:
+    buttons: reorder_toolbar

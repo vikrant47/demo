@@ -1,0 +1,75 @@
+plugin:
+    name: 'gitravel.content::lang.plugin.name'
+    description: 'gitravel.content::lang.plugin.description'
+    author: 'gi travel'
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Content
+        url: gitravel/content/contentcontroller
+        icon: icon-pencil-square-o
+        order: '110'
+        sideMenu:
+            side-menu-item2:
+                label: 'Home Banner'
+                url: gitravel/content/contentcontroller
+                icon: icon-image
+            side-menu-item:
+                label: 'Our Services'
+                url: gitravel/content/ourservicescontroller
+                icon: icon-user-secret
+            side-menu-item3:
+                label: Destinations
+                url: gitravel/content/destinationcontroller
+                icon: icon-globe
+            side-menu-item4:
+                label: 'Tour Packages'
+                url: gitravel/content/tourpackagecontroller
+                icon: icon-subway
+            side-menu-item5:
+                label: Hotels
+                url: gitravel/content/hotelcontroller
+                icon: icon-home
+            side-menu-item7:
+                label: Restaurants
+                url: gitravel/content/restaurantcontroller
+                icon: icon-paw
+            side-menu-item6:
+                label: 'Why Us'
+                url: gitravel/content/whyuscontroller
+                icon: icon-question
+            side-menu-item8:
+                label: 'List Section'
+                url: gitravel/content/listsectioncontroller
+                icon: icon-table
+            side-menu-item9:
+                label: 'Detail Section'
+                url: gitravel/content/detailsectioncontroller
+                icon: icon-tablet
+    main-menu-item2:
+        label: 'Global Content'
+        url: gitravel/content/defaultsectioncontroller
+        icon: icon-briefcase
+        order: '105'
+        sideMenu:
+            side-menu-item2:
+                label: 'Default Section'
+                url: gitravel/content/defaultsectioncontroller
+                icon: icon-file-text
+            side-menu-item:
+                label: Links
+                url: gitravel/content/linkcontroller
+                icon: icon-link
+            side-menu-item3:
+                label: Page
+                url: gitravel/content/pagecontroller
+                icon: icon-sitemap
+            side-menu-item4:
+                label: Sections
+                url: gitravel/content/sectionscontroller
+                icon: icon-bars
+            side-menu-item5:
+                label: Tags
+                url: gitravel/content/tagcontroller
+                icon: icon-tags

@@ -1,0 +1,10 @@
+name: DestinationController
+form: $/gitravel/content/models/destinationmodel/fields.yaml
+modelClass: GiTravel\Content\Models\DestinationModel
+defaultRedirect: gitravel/content/destinationcontroller
+create:
+    redirect: 'gitravel/content/destinationcontroller/update/:id'
+    redirectClose: gitravel/content/destinationcontroller
+update:
+    redirect: gitravel/content/destinationcontroller
+    redirectClose: gitravel/content/destinationcontroller

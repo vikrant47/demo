@@ -1,0 +1,10 @@
+name: PageController
+form: $/gitravel/content/models/pagemodel/fields.yaml
+modelClass: GiTravel\Content\Models\PageModel
+defaultRedirect: gitravel/content/pagecontroller
+create:
+    redirect: 'gitravel/content/pagecontroller/update/:id'
+    redirectClose: gitravel/content/pagecontroller
+update:
+    redirect: gitravel/content/pagecontroller
+    redirectClose: gitravel/content/pagecontroller

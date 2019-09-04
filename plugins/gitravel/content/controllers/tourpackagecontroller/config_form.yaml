@@ -1,0 +1,10 @@
+name: TourPackageController
+form: $/gitravel/content/models/tourpackagemodel/fields.yaml
+modelClass: GiTravel\Content\Models\TourPackageModel
+defaultRedirect: gitravel/content/tourpackagecontroller
+create:
+    redirect: 'gitravel/content/tourpackagecontroller/update/:id'
+    redirectClose: gitravel/content/tourpackagecontroller
+update:
+    redirect: gitravel/content/tourpackagecontroller
+    redirectClose: gitravel/content/tourpackagecontroller

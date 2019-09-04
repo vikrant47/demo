@@ -1,0 +1,36 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: title
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: description
+        type: text
+        sortable: false
+    image:
+        label: image
+        type: text
+        sortable: false
+    image_full_width:
+        label: image_full_width
+        type: text
+        sortable: false
+    created_at:
+        label: created_at
+        type: datetime
+        sortable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        sortable: true
+    sort_order:
+        label: sort_order
+        type: number
+        searchable: true
+        sortable: true

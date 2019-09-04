@@ -1,0 +1,10 @@
+name: ListSectionController
+form: $/gitravel/content/models/listsectionmodel/fields.yaml
+modelClass: GiTravel\Content\Models\ListSectionModel
+defaultRedirect: gitravel/content/listsectioncontroller
+create:
+    redirect: 'gitravel/content/listsectioncontroller/update/:id'
+    redirectClose: gitravel/content/listsectioncontroller
+update:
+    redirect: gitravel/content/listsectioncontroller
+    redirectClose: gitravel/content/listsectioncontroller

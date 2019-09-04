@@ -1,0 +1,10 @@
+name: OurServicesController
+form: $/gitravel/content/models/ourservicesmodel/fields.yaml
+modelClass: GiTravel\Content\Models\OurServicesModel
+defaultRedirect: gitravel/content/ourservicescontroller
+create:
+    redirect: 'gitravel/content/ourservicescontroller/update/:id'
+    redirectClose: gitravel/content/ourservicescontroller
+update:
+    redirect: gitravel/content/ourservicescontroller
+    redirectClose: gitravel/content/ourservicescontroller

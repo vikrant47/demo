@@ -1,0 +1,62 @@
+{% for item in pageItems %}
+    <div class="col-md-4 col-md-4 ftco-animate fadeInUp ftco-animated">
+        <div class="destination">
+            <a href="#" class="img img-2 d-flex justify-content-center align-items-center"
+               style="background-image: url({{ item.image|media }});">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search2"></span>
+                </div>
+            </a>
+            <div class="text p-3">
+                <div class="d-flex">
+                    <div class="one">
+                        <h3><a href="#">{{ item.title }}</a></h3>
+                        <p class="rate">
+                            {% if item.rating is not null %}
+                                {% for i in range(0,item.rating) %}
+                                    <i class="icon-star"></i>
+                                {% endfor %}
+                                <span>{{ item.rating }} Rating</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="two">
+                        <span class="price">{{ item.amount|currency }}</span>
+                    </div>
+                </div>
+                <p>{{ item.description }}</p>
+                <p class="days">
+                    <span>
+                        {% if item.days is not null %}
+                            {{ item.days }} days
+                        {% endif %}
+                        {% if item.nights is not null %}
+                            {{ item.nights }} nights
+                        {% endif %}
+
+                    </span>
+                </p>
+                <hr>
+                <p class="bottom-area d-flex">
+                    <span><i class="icon-map-o"></i> San Franciso, CA</span>
+                    <span class="ml-auto"><a href="#">{{ item.tag }}</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+<div class="row mt-5">
+    <div class="col text-center">
+        <div class="block-27">
+            <ul class="pagination-controls">
+                {% for pageNumber in range(1,pageItems.lastPage()) %}
+
+                    <li {% if pageNumber == pageItems.currentPage() %} class="active" {% endif %}>
+                        <a class="page-number" href="{{ pageItems.url(pageNumber) }}"> <span>{{ pageNumber }}</span></a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</div>

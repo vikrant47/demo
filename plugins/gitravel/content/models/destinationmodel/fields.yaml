@@ -1,0 +1,67 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    image:
+        label: 'Short Image'
+        mode: file
+        span: auto
+        type: mediafinder
+    active:
+        label: Active
+        span: auto
+        default: 1
+        type: checkbox
+    image_full_width:
+        label: 'Full Width Image'
+        mode: file
+        span: auto
+        type: mediafinder
+    featured:
+        label: Featured
+        span: auto
+        default: 1
+        type: checkbox
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        placeholder: 'Enter Sort Order'
+        type: number
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    image_gallery:
+        label: 'Image Gallery'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+tabs:
+    fields:
+        country:
+            label: rainlab.location::lang.country.label
+            type: dropdown
+            span: left
+            placeholder: rainlab.location::lang.country.select
+
+        state:
+            label: rainlab.location::lang.state.label
+            type: dropdown
+            span: right
+            dependsOn: country
+            placeholder: rainlab.location::lang.state.select

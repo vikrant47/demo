@@ -1,0 +1,10 @@
+name: HotelController
+form: $/gitravel/content/models/hotelmodel/fields.yaml
+modelClass: GiTravel\Content\Models\HotelModel
+defaultRedirect: gitravel/content/hotelcontroller
+create:
+    redirect: 'gitravel/content/hotelcontroller/update/:id'
+    redirectClose: gitravel/content/hotelcontroller
+update:
+    redirect: gitravel/content/hotelcontroller
+    redirectClose: gitravel/content/hotelcontroller

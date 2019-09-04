@@ -1,0 +1,10 @@
+name: LinkController
+form: $/gitravel/content/models/linkmodel/fields.yaml
+modelClass: GiTravel\Content\Models\LinkModel
+defaultRedirect: gitravel/content/linkcontroller
+create:
+    redirect: 'gitravel/content/linkcontroller/update/:id'
+    redirectClose: gitravel/content/linkcontroller
+update:
+    redirect: gitravel/content/linkcontroller
+    redirectClose: gitravel/content/linkcontroller

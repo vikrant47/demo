@@ -1,0 +1,50 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    type:
+        label: 'Banner Type'
+        options:
+            simple: Simple
+            complex: Complex
+        showSearch: true
+        span: auto
+        default: url
+        type: dropdown
+        tab: Action
+    sub_title:
+        label: 'Sub Title'
+        span: auto
+        placeholder: 'Enter Subtitle'
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    short_description:
+        label: 'Sub Description'
+        size: ''
+        span: auto
+        type: richeditor
+    image:
+        label: Image
+        mode: file
+        span: auto
+        type: mediafinder
+    links:
+        label: Links
+        mode: file
+        span: auto
+        type: relation
+        nameFrom: title
+        descriptionFrom: description

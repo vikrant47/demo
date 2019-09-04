@@ -1,0 +1,74 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        type: text
+        required: 1
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    icon:
+        label: Icon
+        span: auto
+        placeholder: 'Enter Icon'
+        type: text
+    tooltip:
+        label: Tooltip
+        span: auto
+        placeholder: 'Enter Tooltip'
+        type: text
+        required: 1
+    active:
+        label: Active
+        span: auto
+        default: 1
+        type: checkbox
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        placeholder: 'Enter Order'
+        type: number
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+tabs:
+    fields:
+        type:
+            label: 'Link Type'
+            options:
+                url: URL
+                enternal_url: 'External Url'
+                media: Media
+                image: Image
+                embed: Embed
+            showSearch: true
+            span: auto
+            default: url
+            type: dropdown
+            tab: Action
+        image:
+            label: Image
+            mode: file
+            span: auto
+            type: mediafinder
+            tab: Action
+        media:
+            label: Media
+            mode: file
+            span: auto
+            type: mediafinder
+            tab: Action
+        url:
+            label: Url
+            span: auto
+            placeholder: 'Enter Title'
+            required: 0
+            type: text
+            tab: Action

@@ -1,0 +1,4 @@
+title: LinkController
+modelClass: GiTravel\Content\Models\LinkModel
+toolbar:
+    buttons: reorder_toolbar

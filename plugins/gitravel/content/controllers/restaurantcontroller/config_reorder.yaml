@@ -1,0 +1,4 @@
+title: RestaurantController
+modelClass: GiTravel\Content\Models\RestaurantModel
+toolbar:
+    buttons: reorder_toolbar

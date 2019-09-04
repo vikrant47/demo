@@ -1,0 +1,41 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        type: text
+        required: 1
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    icon:
+        label: Icon
+        span: auto
+        placeholder: 'Enter Icon'
+        default: flaticon-support
+        type: text
+    featured:
+        label: Featured
+        span: auto
+        default: 1
+        type: checkbox
+    active:
+        label: Active
+        span: auto
+        default: 1
+        type: checkbox
+    description:
+        label: Description
+        size: ''
+        span: auto
+        placeholder: 'Enter Description'
+        type: richeditor
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        placeholder: 'Enter Order'
+        type: number

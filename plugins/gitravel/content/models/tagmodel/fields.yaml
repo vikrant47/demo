@@ -1,0 +1,16 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        placeholder: 'Enter Tag Name'
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        placeholder: 'Enter Slug'
+        required: 1
+        preset:
+            field: name
+            type: slug
+        type: text

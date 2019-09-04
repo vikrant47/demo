@@ -1,0 +1,4 @@
+title: ListSectionController
+modelClass: GiTravel\Content\Models\ListSectionModel
+toolbar:
+    buttons: reorder_toolbar

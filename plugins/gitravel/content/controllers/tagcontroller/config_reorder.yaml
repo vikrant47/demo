@@ -1,0 +1,4 @@
+title: TagController
+modelClass: GiTravel\Content\Models\TagModel
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,33 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    image:
+        label: Image
+        mode: file
+        span: auto
+        type: mediafinder
+    active:
+        label: Active
+        span: auto
+        default: 1
+        type: checkbox
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        placeholder: 'Enter Order'
+        type: number

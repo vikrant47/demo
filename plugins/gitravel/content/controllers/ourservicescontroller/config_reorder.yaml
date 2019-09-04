@@ -1,0 +1,4 @@
+title: OurServicesController
+modelClass: GiTravel\Content\Models\OurServicesModel
+toolbar:
+    buttons: reorder_toolbar

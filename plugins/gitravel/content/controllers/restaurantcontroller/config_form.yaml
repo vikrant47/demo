@@ -1,0 +1,10 @@
+name: RestaurantController
+form: $/gitravel/content/models/restaurantmodel/fields.yaml
+modelClass: GiTravel\Content\Models\RestaurantModel
+defaultRedirect: gitravel/content/restaurantcontroller
+create:
+    redirect: 'gitravel/content/restaurantcontroller/update/:id'
+    redirectClose: gitravel/content/restaurantcontroller
+update:
+    redirect: gitravel/content/restaurantcontroller
+    redirectClose: gitravel/content/restaurantcontroller

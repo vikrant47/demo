@@ -1,0 +1,102 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        type: text
+    section_type:
+        label: 'Section Type'
+        options:
+            default_sections: Default
+            services: 'Our Services'
+            packages: Packages
+            hotels: Hotels
+            restaurants: Restaurants
+            whyus_elements: 'Why Us'
+            destinations: Destinations
+            lists: List
+            details: Detail
+        showSearch: true
+        span: auto
+        default: default_sections
+        type: dropdown
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        placeholder: 'Enter Order'
+        type: number
+    sub_title:
+        label: Sub Title
+        size: ''
+        span: auto
+        type: richeditor
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    default_sections:
+        label: 'Default Sections'
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    services:
+        label: Services
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+        pivot[section_type]:
+            label: Price
+            type: number
+            default: services
+    destinations:
+        label: Destinations
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    hotels:
+        label: Hotels
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    packages:
+        label: Packages
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    whyus_elements:
+        label: 'Why Us'
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    restaurants:
+        label: Restaurants
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    lists:
+        label: Lists
+        nameFrom: type
+        descriptionFrom: description
+        span: auto
+        type: relation
+    details:
+        label: Details
+        nameFrom: type
+        descriptionFrom: description
+        span: auto
+        type: relation

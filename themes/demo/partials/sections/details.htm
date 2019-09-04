@@ -1,0 +1,208 @@
+{% set detailRecord = section.details[0].getDetailRecord(page.param('item-slug')) %}
+{% if detailRecord is not empty %}
+    {% set detailRecord = detailRecord[0] %}
+    <section class="ftco-section ftco-degree-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 sidebar">
+                    <div class="sidebar-wrap bg-light ftco-animate">
+                        <h3 class="heading mb-4">Find City</h3>
+                        <form action="#">
+                            <div class="fields">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Destination, City">
+                                </div>
+                                <div class="form-group">
+                                    <div class="select-wrap one-third">
+                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                        <select name="" id="" class="form-control" placeholder="Keyword search">
+                                            <option value="">Select Location</option>
+                                            <option value="">San Francisco USA</option>
+                                            <option value="">Berlin Germany</option>
+                                            <option value="">Lodon United Kingdom</option>
+                                            <option value="">Paris Italy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="checkin_date" class="form-control" placeholder="Date from">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="checkin_date" class="form-control" placeholder="Date to">
+                                </div>
+                                <div class="form-group">
+                                    <div class="range-slider">
+                                    <span>
+                                    <input type="number" value="25000" min="0" max="120000"/> -
+                                    <input type="number" value="50000" min="0" max="120000"/>
+                                    </span>
+                                        <input value="1000" min="0" max="120000" step="500" type="range"/>
+                                        <input value="50000" min="0" max="120000" step="500" type="range"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sidebar-wrap bg-light ftco-animate">
+                        <h3 class="heading mb-4">Star Rating</h3>
+                        <form method="post" class="star-rating">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">
+                                    <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
+                                                    class="icon-star"></i><i class="icon-star"></i><i
+                                                    class="icon-star"></i></span>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">
+                                    <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
+                                                    class="icon-star"></i><i class="icon-star"></i><i
+                                                    class="icon-star-o"></i></span></p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">
+                                    <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
+                                                    class="icon-star"></i><i class="icon-star-o"></i><i
+                                                    class="icon-star-o"></i></span></p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">
+                                    <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
+                                                    class="icon-star-o"></i><i class="icon-star-o"></i><i
+                                                    class="icon-star-o"></i></span></p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">
+                                    <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i
+                                                    class="icon-star-o"></i><i class="icon-star-o"></i><i
+                                                    class="icon-star-o"></i></span></p>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="single-slider owl-carousel">
+                                {% for image in detailRecord.image_gallery %}
+                                    <div class="item">
+                                        <div class="hotel-img" style="background-image: url({{ image.path }});"></div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-12 hotel-single mt-4 mb-5 ftco-animate">
+                            <span>{{ section.title }}</span>
+                            <h2>{{ detailRecord.title }}</h2>
+                            <p class="rate mb-5">
+                                <span class="loc"><a href="#"><i class="icon-map"></i> 291 South 21th Street, Suite 721 New York NY 10016</a></span>
+                                <span class="star">
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star-o"></i>
+                            {{ detailRecord.rating }} Rating</span>
+                            </p>
+                            {{ detailRecord.detailed_description|raw }}
+                        </div>
+                        <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
+                            <h4 class="mb-4">Take A Tour</h4>
+                            <div class="block-16">
+                                <figure>
+                                    <img src="{{ detailRecord.video_link.image|media }}" alt="Image placeholder"
+                                         class="img-fluid">
+                                    <a href="#" class="call-to-action play-button"
+                                       data-link='{{ detailRecord.video_link|json_encode }}'
+                                       data-tooltip="{{ detailRecord.video_link.tooltip }}"
+                                       data-media="{{ detailRecord.video_link.media|media }}"
+                                       data-image="{{ detailRecord.video_link.image|media }}">
+                                        <span class="icon-play"></span>
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
+                        <ul class="nav navbar-nav">
+                            {% for plan in detailRecord.travel_plan %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section-{{ detailRecord.id }}-{{ loop.index }}">
+                                        {% if plan.from_day == pla.to_day %}
+                                            Day {{ plan.from_day }}
+                                        {% else %}
+                                            Day {{ plan.from_day }} - {{ plan.to_day }}
+                                        {% endif %}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                    <!-- Section 1 -->
+                    {% for plan in detailRecord.travel_plan %}
+                        <div id="section-{{ detailRecord.id }}-{{ loop.index }}" class="row plan-detail p-2">
+                            <div class="col-md-12">
+                                {% if plan.flights is not empty %}
+                                    {% for flight in plan.flights %}
+                                        <div class="row" p-2>
+                                            <div class="col-md-4">
+                                                <span>From: {{ flight.flight_from }}</span>
+                                                <span>At: {{ flight.departure_at }}</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="hour">
+                                                    <span class="line hidden-md"></span>
+                                                    <i class="ico ico-plane-2"></i>
+                                                    <small class="timing hidden-sm">
+                                                        <span class="">Non Stop</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span>To: {{ flight.flight_to }}</span>
+                                                <span>At: {{ flight.reached_at }}</span>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                                {% set hotel =  section.details[0].getHotelBySlug(plan.hotel) %}
+                                <div class="row p-2">
+                                    <div class="col-md-4">
+                                        <span>Hotel</span>
+                                        Checkin for {{ plan.to_day + 1  - plan.from_day }} day(s)
+                                    </div>
+                                    <div class="col-md-4">
+                                        {{ hotel.title }}
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ hotel.image|media }}" class="img-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}

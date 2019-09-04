@@ -1,0 +1,176 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        type: text
+        required: 1
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    featured:
+        label: Featured
+        span: auto
+        default: 1
+        type: checkbox
+    active:
+        label: Active
+        span: auto
+        default: 1
+        type: checkbox
+    image:
+        label: Image
+        mode: file
+        span: auto
+        type: mediafinder
+    tag:
+        label: Tag
+        nameFrom: slug
+        descriptionFrom: name
+        span: auto
+        type: relation
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        type: number
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    image_gallery:
+        label: 'Image Gallery'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+tabs:
+    fields:
+        days:
+            label: Days
+            span: auto
+            placeholder: 'Enter Days'
+            type: number
+            tab: Details
+        night:
+            label: Nights
+            span: auto
+            placeholder: 'Enter Nights'
+            dependsOn:
+                - days
+            type: number
+            tab: Details
+        rating:
+            label: Rating
+            span: auto
+            placeholder: 'Enter Rating'
+            type: number
+            tab: Details
+        price:
+            label: Price
+            span: auto
+            placeholder: 'Enter Price'
+            type: money
+            mode: amountcurrency
+            tab: Details
+        country:
+            label: 'rainlab.location::lang.country.label'
+            type: dropdown
+            span: left
+            placeholder: 'rainlab.location::lang.country.select'
+            tab: Location
+        state:
+            label: 'rainlab.location::lang.state.label'
+            type: dropdown
+            span: right
+            dependsOn: country
+            placeholder: 'rainlab.location::lang.state.select'
+            tab: Location
+        video_link:
+            label: Link
+            span: auto
+            nameFrom: slug
+            descriptionFrom: description
+            placeholder: 'Select Video Link'
+            type: relation
+            tab: Content
+        detailed_description:
+            label: 'Detailed Description'
+            span: auto
+            descriptionFrom: description
+            placeholder: 'Enter Detailed Description'
+            type: richeditor
+            tab: Content
+        travel_plan:
+            label: 'Travel Plan'
+            prompt: 'Add new item'
+            span: auto
+            type: repeater
+            tab: Content
+            form:
+                fields:
+                    from_day:
+                        label: 'From Day'
+                        span: auto
+                        placeholder: 'Enter From Day'
+                        default: '1'
+                        type: number
+                    to_day:
+                        label: 'To Day'
+                        span: auto
+                        placeholder: 'Enter To Day'
+                        default: '2'
+                        type: number
+                    city:
+                        label: City
+                        span: auto
+                        type: text
+                    hotel:
+                        label: Hotel
+                        nameFrom: name
+                        placeholder: 'Enter Hotel Slug'
+                        descriptionFrom: description
+                        span: auto
+                        type: text
+                    meals:
+                        label: Meals
+                        size: ''
+                        span: auto
+                        type: richeditor
+                    sightseeing:
+                        label: Sightseeing
+                        size: ''
+                        span: auto
+                        type: richeditor
+                    flights:
+                        label: Flights
+                        prompt: 'Add new item'
+                        span: auto
+                        type: repeater
+                        form:
+                            fields:
+                                flight_from:
+                                    label: 'Flight From'
+                                    span: auto
+                                    type: text
+                                flight_to:
+                                    label: 'Flight To'
+                                    span: auto
+                                    type: text
+                                departure_at:
+                                    label: 'Departure At'
+                                    mode: time
+                                    span: auto
+                                    type: datepicker
+                                reached_at:
+                                    label: 'Reached At'
+                                    mode: time
+                                    span: auto
+                                    type: datepicker

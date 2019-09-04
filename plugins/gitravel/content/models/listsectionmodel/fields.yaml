@@ -1,0 +1,20 @@
+fields:
+    type:
+        label: Type
+        options:
+            gitravel_content_tour_packages: Package
+            gitravel_content_hotels: Hotel
+            gitravel_content_restaurents: Restaurent
+            gitravel_content_destinations: Destination
+        showSearch: true
+        span: auto
+        required: 1
+        type: dropdown
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        type: number
+    item_per_page:
+        label: 'Items Per Page'
+        span: auto
+        type: number

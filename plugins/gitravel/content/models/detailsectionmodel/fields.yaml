@@ -1,0 +1,28 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    type:
+        label: Type
+        options:
+            GiTravel\Content\Models\TourPackageModel: Package
+            GiTravel\Content\Models\HotelModel: Hotel
+            GiTravel\Content\Models\RestaurentModel: Restaurent
+            GiTravel\Content\Models\DestinationModel: Destination
+        showSearch: true
+        span: auto
+        required: 1
+        type: dropdown
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        type: number

@@ -1,0 +1,4 @@
+title: DetailSectionController
+modelClass: GiTravel\Content\Models\DetailSectionModel
+toolbar:
+    buttons: reorder_toolbar

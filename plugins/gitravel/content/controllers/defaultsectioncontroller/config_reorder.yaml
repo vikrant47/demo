@@ -1,0 +1,4 @@
+title: DefaultSectionController
+modelClass: GiTravel\Content\Models\DefaultSectionModel
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: ContentController
+form: $/gitravel/content/models/homebannermodel/fields.yaml
+modelClass: GiTravel\Content\Models\HomeBannerModel
+defaultRedirect: gitravel/content/contentcontroller
+create:
+    redirect: 'gitravel/content/contentcontroller/update/:id'
+    redirectClose: gitravel/content/contentcontroller
+update:
+    redirect: gitravel/content/contentcontroller
+    redirectClose: gitravel/content/contentcontroller

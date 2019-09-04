@@ -1,0 +1,4 @@
+title: DestinationController
+modelClass: GiTravel\Content\Models\DestinationModel
+toolbar:
+    buttons: reorder_toolbar

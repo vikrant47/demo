@@ -1,0 +1,14 @@
+fields:
+    state_id:
+        label: State
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
+    name:
+        label: 'City Name'
+        span: auto
+        placeholder: 'Enter City Name'
+        required: 1
+        type: text

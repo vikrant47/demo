@@ -1,0 +1,45 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    description:
+        label: Description
+        size: ''
+        mode: tab
+        span: auto
+        type: richeditor
+tabs:
+    fields:
+        testimony_title:
+            label: 'Testimony Title'
+            span: auto
+            placeholder: 'Enter Testimony Title'
+            required: 1
+            type: text
+            tab: Testimony
+
+        slides:
+            label: 'Slides'
+            nameFrom: title
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: Testimony
+
+        testimony_description:
+            label: Testimony Description
+            size: ''
+            mode: tab
+            span: auto
+            type: richeditor
+            tab: Testimony

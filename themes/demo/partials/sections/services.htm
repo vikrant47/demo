@@ -1,0 +1,21 @@
+==
+{% set services =  section.services %}
+<section class="ftco-section services-section bg-light {{section.section_type}}">
+    <div class="container">
+        <div class="row d-flex">
+            {%for service in services%}
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="{{service.icon}}"></span></div>
+                    </div>
+                    <div class="media-body p-2 mt-2">
+                        <h3 class="heading mb-3">{{service.title}}</h3>
+                        {{service.description|raw}}
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+name: WhyUsController
+form: $/gitravel/content/models/whyusmodel/fields.yaml
+modelClass: GiTravel\Content\Models\WhyUsModel
+defaultRedirect: gitravel/content/whyuscontroller
+create:
+    redirect: 'gitravel/content/whyuscontroller/update/:id'
+    redirectClose: gitravel/content/whyuscontroller
+update:
+    redirect: gitravel/content/whyuscontroller
+    redirectClose: gitravel/content/whyuscontroller

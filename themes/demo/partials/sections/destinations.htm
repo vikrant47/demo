@@ -1,0 +1,33 @@
+==
+<section class="ftco-section services-section bg-light {{section.section_type}}">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">{{section.title}}</span>
+                <h2 class="mb-4">{{section.sub_title|raw}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="destination-slider owl-carousel ftco-animate">
+                    {%for destination in section.destinations%}
+                    <div class="item">
+                        <div class="destination">
+                            <a href="#" class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url({{destination.short_image?destination.image:destination.image_full_width|media}});">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <h3><a href="#">{{destination.title}}</a></h3>
+                                <span class="listing">15 Listing</span>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

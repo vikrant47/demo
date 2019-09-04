@@ -1,0 +1,12 @@
+list: $/gitravel/content/models/restaurantmodel/columns.yaml
+modelClass: GiTravel\Content\Models\RestaurantModel
+title: RestaurantController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gitravel/content/restaurantcontroller/update/:id'

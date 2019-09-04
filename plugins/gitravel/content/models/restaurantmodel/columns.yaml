@@ -1,0 +1,46 @@
+columns:
+    id:
+        label: id
+        type: number
+    title:
+        label: title
+        type: text
+    slug:
+        label: slug
+        type: text
+    rating:
+        label: rating
+        type: text
+    sort_order:
+        label: sort_order
+        type: number
+    price:
+        label: price
+        type: text
+    currency_id:
+        label: currency_id
+        type: number
+    tag_id:
+        label: tag_id
+        type: number
+    country_id:
+        label: country_id
+        type: text
+    state_id:
+        label: state_id
+        type: text
+    city_id:
+        label: city_id
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+    featured:
+        label: featured
+        type: text
+    active:
+        label: active
+        type: text

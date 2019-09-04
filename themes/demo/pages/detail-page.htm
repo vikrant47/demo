@@ -1,0 +1,63 @@
+title = "Detail Page"
+url = "/page/:slug/detail/:item-slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails page]
+modelClass = "GiTravel\Content\Models\PageModel"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+<?php
+use GiTravel\Content\Models\ListSectionModel;
+
+/**
+function onStart(){
+    $this->prepareVars();
+}
+function prepareVars(){
+$options = $post('filters',[]);
+}
+*/
+
+function onGetListItems()
+{
+
+$listId = post('listId');
+$options = post('filters',[]);
+$list =   ListSectionModel::find($listId);
+$this['pageItems'] = $list->getSectionItems($options);
+//   return   $this->page['litsItems'];
+}
+?>
+==
+{% partial 'sections/top-banner' %}
+{% set sections =  page.record.sections %}
+{% for section in sections %}
+    {% partial 'sections/'~section.section_type section=section %}
+{% endfor %}
+<section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2>Subcribe to our Newsletter</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts. Separated they live in</p>
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class="col-md-8">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <input type="text" class="form-control" placeholder="Enter email address">
+                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

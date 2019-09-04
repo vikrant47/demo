@@ -1,0 +1,98 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gitravel_content_home_banner'
+    - builder_table_create_gitravel_content_home_banner.php
+1.0.3:
+    - 'Created table gitravel_content_our_services'
+    - builder_table_create_gitravel_content_our_services.php
+1.0.4:
+    - 'Created table gitravel_content_destination'
+    - builder_table_create_gitravel_content_destination.php
+1.0.11:
+    - 'Created table gitravel_content_tour_packages'
+    - builder_table_create_gitravel_content_tour_packages.php
+1.0.15:
+    - 'Created table gitravel_content_hotels'
+    - builder_table_create_gitravel_content_hotels.php
+1.0.16:
+    - 'Created table gitravel_restaurants'
+    - builder_table_create_gitravel_content_restaurants.php
+1.0.17:
+    - 'Created table gitravel_content_default_section'
+    - builder_table_create_gitravel_content_default_section.php
+1.0.19:
+    - 'Created table gitravel_content_links'
+    - builder_table_create_gitravel_content_links.php
+1.0.20:
+    - 'Created table gitravel_content_why_us'
+    - builder_table_create_gitravel_content_why_us.php
+1.0.21:
+    - 'Created table gitravel_content_feedbacks'
+    - builder_table_create_gitravel_content_feedbacks.php
+1.0.22:
+    - 'Created table gitravel_content_default_section_associations'
+    - builder_table_create_gitravel_content_default_section_associations.php
+1.0.23:
+    - 'Created table gitravel_content_home_page'
+    - builder_table_create_gitravel_content_home_page.php
+1.0.24:
+    - 'Updated table gitravel_content_home_page'
+    - builder_table_update_gitravel_content_page.php
+1.0.25:
+    - 'Updated table gitravel_content_page'
+    - builder_table_update_gitravel_content_page_2.php
+1.0.26:
+    - 'Updated table gitravel_content_page'
+    - builder_table_update_gitravel_content_page_3.php
+1.0.27:
+    - 'Updated table gitravel_content_page'
+    - builder_table_update_gitravel_content_page_4.php
+1.0.28:
+    - 'Updated table gitravel_content_page'
+    - builder_table_update_gitravel_content_page_5.php
+1.0.29:
+    - 'Updated table gitravel_content_page'
+    - builder_table_update_gitravel_content_page_6.php
+1.0.30:
+    - 'Created table gitravel_content_page_section_associations'
+    - builder_table_create_gitravel_content_page_section_associations.php
+1.0.32:
+    - 'Created table gitravel_content_service_section_associations'
+    - builder_table_create_gitravel_content_service_section_associations.php
+1.0.33:
+    - 'Created table gitravel_content_hotel_section_associations'
+    - builder_table_create_gitravel_content_hotel_section_associations.php
+1.0.34:
+    - 'Created table gitravel_content_destination_section_associations'
+    - builder_table_create_gitravel_content_destination_section_associations.php
+1.0.35:
+    - 'Created table gitravel_content_package_section_associations'
+    - builder_table_create_gitravel_content_package_section_associations.php
+1.0.36:
+    - 'Created table gitravel_content_why_us_section_associations'
+    - builder_table_create_gitravel_content_why_us_section_associations.php
+1.0.37:
+    - 'Created table gitravel_content_restaurant_section_associations'
+    - builder_table_create_gitravel_content_restaurant_section_associations.php
+1.0.38:
+    - 'Created table gitravel_content_tags'
+    - builder_table_create_gitravel_content_tags.php
+1.0.39:
+    - 'Created table gitravel_content_why_us_slide_associations'
+    - builder_table_create_gitravel_content_why_us_slide_associations.php
+1.0.40:
+    - 'Created table gitravel_content_banner_link_associations'
+    - builder_table_create_gitravel_content_banner_link_associations.php
+1.0.41:
+    - 'Created table gitravel_content_list_section'
+    - builder_table_create_gitravel_content_list_section.php
+1.0.42:
+    - 'Created table gitravel_content_list_section_assoctaions'
+    - builder_table_create_gitravel_content_list_section_assoctaions.php
+1.0.43:
+    - 'Created table gitravel_content_detail_section'
+    - builder_table_create_gitravel_content_detail_section.php
+1.0.44:
+    - 'Created table gitravel_content_detail_section_associations'
+    - builder_table_create_gitravel_content_detail_section_associations.php

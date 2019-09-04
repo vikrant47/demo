@@ -1,0 +1,4 @@
+title: WhyUsController
+modelClass: GiTravel\Content\Models\WhyUsModel
+toolbar:
+    buttons: reorder_toolbar

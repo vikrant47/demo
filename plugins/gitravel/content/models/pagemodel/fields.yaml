@@ -1,0 +1,73 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        placeholder: 'Enter Title'
+        type: text
+        required: 1
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    detail_page:
+        label: 'Detail Page'
+        mode: file
+        span: auto
+        type: checkbox
+    detail_page_type:
+        label: 'Detail Page Type'
+        options:
+            default_sections: Default
+            services: 'Our Services'
+            packages: Packages
+            hotels: Hotels
+            restaurants: Restaurants
+            whyus_elements: 'Why Us'
+            destinations: Destinations
+            lists: List
+        showSearch: true
+        span: auto
+        default: default_sections
+        trigger:
+            action: show
+            field: detail_page
+            condition: checked
+        type: dropdown
+    active:
+        label: Active
+        span: auto
+        default: 1
+        type: checkbox
+    meta_image:
+        label: 'Meta Image'
+        mode: file
+        span: auto
+        type: mediafinder
+    meta_description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    meta_keyword:
+        label: Keywords
+        size: ''
+        span: auto
+        placeholder: 'Enter Keywords'
+        type: textarea
+    banner:
+        placeholder: Auto
+        emptyOption: None
+        label: Banner
+        nameFrom: slug
+        descriptionFrom: description
+        span: auto
+        type: relation
+    sections:
+        label: Sections
+        nameFrom: slug
+        descriptionFrom: description
+        span: auto
+        type: relation

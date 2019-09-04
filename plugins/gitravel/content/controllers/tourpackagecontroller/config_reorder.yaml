@@ -1,0 +1,4 @@
+title: TourPackageController
+modelClass: GiTravel\Content\Models\TourPackageModel
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: SectionsController
+form: $/gitravel/content/models/sectionmodel/fields.yaml
+modelClass: GiTravel\Content\Models\SectionModel
+defaultRedirect: gitravel/content/sectionscontroller
+create:
+    redirect: 'gitravel/content/sectionscontroller/update/:id'
+    redirectClose: gitravel/content/sectionscontroller
+update:
+    redirect: gitravel/content/sectionscontroller
+    redirectClose: gitravel/content/sectionscontroller

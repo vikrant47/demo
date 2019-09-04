@@ -1,0 +1,4 @@
+title: HotelController
+modelClass: GiTravel\Content\Models\HotelModel
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: TagController
+form: $/gitravel/content/models/tagmodel/fields.yaml
+modelClass: GiTravel\Content\Models\TagModel
+defaultRedirect: gitravel/content/tagcontroller
+create:
+    redirect: 'gitravel/content/tagcontroller/update/:id'
+    redirectClose: gitravel/content/tagcontroller
+update:
+    redirect: gitravel/content/tagcontroller
+    redirectClose: gitravel/content/tagcontroller

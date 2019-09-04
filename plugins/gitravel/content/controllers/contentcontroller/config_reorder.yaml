@@ -1,0 +1,4 @@
+title: ContentController
+modelClass: GiTravel\Content\Models\HomeBannerModel
+toolbar:
+    buttons: reorder_toolbar

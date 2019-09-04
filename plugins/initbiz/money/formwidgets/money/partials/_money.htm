@@ -1,0 +1,40 @@
+<!-- Money field -->
+<div class="money-widget">
+    <div
+        class="money-config"
+        data-widget-mode="<?= $this->mode ?>"
+        data-currency-code="<?= $currencyConfig->currency_code ?>"
+        data-currency-symbol="<?= $currencyConfig->currency_symbol ?>"
+        data-decimal-point="<?= $currencyConfig->decimal_point ?>"
+        data-thousand-separator="<?= $currencyConfig->thousand_separator ?>"
+        data-place-symbol-before="<?= $currencyConfig->place_symbol_before ?>"
+        data-fraction-digits="<?= $currencyConfig->initbiz_money_fraction_digits ?>"
+        >
+    </div>
+<?php if ($this->previewMode): ?>
+    <div class="form-control"><?= e(Currency::format($value, ['format' => $format])) ?></div>
+<?php else: ?>
+    <div
+        id="<?= $this->getId() ?>"
+        class="form-group number-field <?= $this->mode ?>-wrapper">
+        <input
+            name="<?= $name ?>"
+            id="<?= $this->getId('amount') ?>"
+            value="<?= e($amount) ?>"
+            class="form-control amount-input currency"
+            autocomplete="off"
+            />
+
+        <?php if ($this->mode == "amountcurrency"): ?>
+            <?= $this->makePartial('currency_dropdown', ['field' => $currenciesField]) ?>
+        <?php else: ?>
+            <input
+                name="<?= $currenciesField->getName() ?>"
+                id="<?= $this->getId('currency') ?>"
+                value="<?= e($currenciesField->value) ?>"
+                type="hidden"
+                />
+        <?php endif ?>
+    </div>
+<?php endif ?>
+</div>

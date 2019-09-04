@@ -1,0 +1,12 @@
+list: $/gitravel/content/models/tourpackagemodel/columns.yaml
+modelClass: GiTravel\Content\Models\TourPackageModel
+title: TourPackageController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gitravel/content/tourpackagecontroller/update/:id'

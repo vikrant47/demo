@@ -1,0 +1,25 @@
+columns:
+    id:
+        label: id
+        type: number
+    title:
+        label: title
+        type: text
+    meta_description:
+        label: meta_description
+        type: text
+    meta_image:
+        label: meta_image
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+    slug:
+        label: slug
+        type: text
+    active:
+        label: active
+        type: text
